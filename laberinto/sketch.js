@@ -56,13 +56,13 @@ class Map {
 
 class Player {
     constructor() {
-        this.x = WINDOW_WIDTH / 2;
-        this.y = WINDOW_HEIGHT / 2;
+        this.x = 100;
+        this.y = 570;
         this.radius = 4;
         this.turnDirection = 0;      //-1 for left , 1 for right
         this.walkDirection = 0;      //-1 for back , 1 for front
         this.strafeDirection = 0;      //-1 for back , 1 for front
-        this.rotationAngle =  Math.PI / 2;
+        this.rotationAngle =  -Math.PI / 2;
         this.moveSpeed = 5.0;
         this.rotationSpeed = 3 * (Math.PI / 180)
 
@@ -320,7 +320,7 @@ function render3DProjectedWalls() {
 }
 
 
-function setup() {
+function setup(WEBGL) {
     // initialize all objects
     createCanvas(WINDOW_WIDTH, WINDOW_HEIGHT);
 }
